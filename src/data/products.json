@@ -1,0 +1,107 @@
+[
+  {
+    "id": "1",
+    "name": "Raw Shea Butter",
+    "image": "product1.webp",
+    "description": "Pure and unrefined.",
+    "category": "Cosmetics"
+  },
+  {
+    "id": "2",
+    "name": "Anti-Wrinkle Cream",
+    "image": "product1.webp",
+    "description": "Fights fine lines, hydrates deeply.",
+    "category": "Cosmetics"
+  },
+  {
+    "id": "3",
+    "name": "Sunburn Cream",
+    "image": "product1.webp",
+    "description": "Cools, heals, and soothes.",
+    "category": "Cosmetics"
+  },
+  {
+    "id": "4",
+    "name": "Deodorant",
+    "image": "product1.webp",
+    "description": "Natural freshness without chemicals.",
+    "category": "Cosmetics"
+  },
+  {
+    "id": "5",
+    "name": "Foot Cream",
+    "image": "product1.webp",
+    "description": "Deep hydration and healing for cracked heels.",
+    "category": "Cosmetics"
+  },
+  {
+    "id": "6",
+    "name": "Shampoo & Conditioner",
+    "image": "product1.webp",
+    "description": "Cleansing and nourishing with plant extracts.",
+    "category": "Cosmetics"
+  },
+  {
+    "id": "7",
+    "name": "Face & Neck Cream",
+    "image": "product1.webp",
+    "description": "Daily glow inspired by Nefertiti.",
+    "category": "Cosmetics"
+  },
+  {
+    "id": "8",
+    "name": "Frankincense",
+    "image": "product1.webp",
+    "description": "Traditional aromatic resin for spiritual practices.",
+    "category": "Incense"
+  },
+  {
+    "id": "9",
+    "name": "Myrrh",
+    "image": "product1.webp",
+    "description": "Ancient healing resin with rich history.",
+    "category": "Incense"
+  },
+  {
+    "id": "10",
+    "name": "Sandalwood",
+    "image": "product1.webp",
+    "description": "Sacred wood for meditation and purification.",
+    "category": "Incense"
+  },
+  {
+    "id": "11",
+    "name": "Cinnamon",
+    "image": "product1.webp",
+    "description": "Warming spice for spiritual practices.",
+    "category": "Incense"
+  },
+  {
+    "id": "12",
+    "name": "Lavender",
+    "image": "product1.webp",
+    "description": "Calming herb for relaxation and sleep.",
+    "category": "Herbs"
+  },
+  {
+    "id": "13",
+    "name": "Chamomile",
+    "image": "product1.webp",
+    "description": "Soothing herb for stress relief.",
+    "category": "Herbs"
+  },
+  {
+    "id": "14",
+    "name": "Mint",
+    "image": "product1.webp",
+    "description": "Refreshing herb for digestion and energy.",
+    "category": "Herbs"
+  },
+  {
+    "id": "15",
+    "name": "Rosemary",
+    "image": "product1.webp",
+    "description": "Memory-enhancing herb with ancient uses.",
+    "category": "Herbs"
+  }
+]

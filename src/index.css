@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Phenomena";
+  src: url("/fonts/Phenomena-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  /* margin: 0;
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh; */
+  overflow-x: clip;
+  background: #1f1e1d;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  /* justify-content: center;
+  align-items: center; */
+  z-index: 10000;
+}
+
+.menu-bar a,
+.menu-open p {
+  color: white;
+  cursor: pointer;
+}
+
+.menu-close p {
+  color: #000;
+  cursor: pointer;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  background: #1f1e1d;
+  z-index: 9999;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.menu-copy {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2em;
+}
+
+.menu-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-close-icon p {
+  font-size: 100px;
+  -webkit-text-stroke: 5px #1f1e1d;
+  line-height: 70%;
+}
+
+.menu-link-item {
+  width: max-content;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.menu-link-item-holder {
+  position: relative;
+}
+
+.menu-link-item-holder a {
+  color: #000;
+  font-size: 80px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 85%;
+}
+
+.menu-info {
+  display: flex;
+}
+
+.menu-info-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.circle-wrapper {
+  position: relative;
+  width: 140px; /* Smaller size */
+  height: 140px;
+}
+
+.circle-rotating-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: spin 10s linear infinite;
+}
+
+.circular-text {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #ffb400;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 11px; /* Smaller font */
+  letter-spacing: 1.5px;
+}
+
+.center-arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffb400;
+  font-size: 18px; /* Smaller arrow */
+  z-index: 10;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom Swiper Navigation Styling */
+.swiper-button-next,
+.swiper-button-prev {
+  position: static !important;
+  color: #ffb400 !important;
+  width: auto;
+  height: auto;
+  margin: 0 10px;
+  font-size: 1.5rem;
+}
+
+.swiper-nav-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 70px;
+}
