@@ -9,11 +9,11 @@ const ProductCard = ({ product }) => {
     : `/${product.image}`;
 
   return (
-    <div className="relative overflow-hidden rounded-[50px] shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <div className="relative overflow-hidden rounded-[50px] shadow-lg hover:shadow-xl transition-shadow duration-300 w-[300px] h-[400px]">
       <img
         src={imageSrc}
         alt={product.name}
-        className="w-full h-[400px] object-cover"
+        className="w-full h-full object-cover"
         onError={(e) => {
           // Fallback to default image if loading fails
           e.target.src = '/product1.webp';

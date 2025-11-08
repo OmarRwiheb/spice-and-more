@@ -4,7 +4,12 @@ import { fetchProducts } from '../services/strapi';
 /**
  * Custom hook to fetch products from Strapi
  * @param {Object} options - Query options
- * @param {string} options.category - Filter by category
+ * @param {string|Array<string>} options.category - Filter by category (single or multiple)
+ * @param {string} options.search - Search in product name or description
+ * @param {number} options.limit - Limit number of results
+ * @param {number} options.start - Start position for pagination
+ * @param {string} options.sort - Sort field (e.g., 'name:asc', 'name:desc')
+ * @param {Object} options.filters - Custom filters object (Strapi filter format)
  * @param {boolean} options.enabled - Whether to fetch (default: true)
  * @returns {Object} { products, loading, error, refetch }
  */
@@ -30,7 +35,7 @@ export const useProducts = (options = {}) => {
     } finally {
       setLoading(false);
     }
-  }, [options.category, options.enabled]);
+  }, [options.category, options.search, options.limit, options.start, options.sort, options.enabled]);
 
   useEffect(() => {
     fetchData();
