@@ -3,11 +3,13 @@ import Hero from '../components/CollectionPage/Hero';
 import Header from '../components/CollectionPage/Header';
 import Benefits from '../components/CollectionPage/Benefits';
 import Products from '../components/CollectionPage/Products';
-import productsData from '../data/products.json';
+import { useProducts } from '../hooks/useProducts';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Herbs = () => {
+  const { products, loading, error } = useProducts({ category: 'Herbs' });
+
   useEffect(() => {
     AOS.init({
       duration: 1500,
@@ -15,8 +17,6 @@ const Herbs = () => {
       once: true,
     });
   }, []);
-
-  const products = productsData.filter(product => product.category === "Herbs");
 
   const benefits = [
     { title: 'Natural Healing', icon: 'icon1.webp' },
@@ -51,7 +51,9 @@ const Herbs = () => {
         <Benefits benefits={benefits} />
       </div>
       <div data-aos="fade-up" data-aos-delay="400">
-        <Products products={products} />
+        {loading && <div className="text-center py-12">Loading products...</div>}
+        {error && <div className="text-center py-12 text-red-400">Error: {error}</div>}
+        {!loading && !error && <Products products={products} />}
       </div>
     </main>
   );

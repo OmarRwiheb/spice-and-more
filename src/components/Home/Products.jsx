@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import ProductCard from "../common/ProductCard";
-import products from "../../data/products.json";
+import { useProducts } from "../../hooks/useProducts";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import CategoryFilter from "../CategoryFilter";
@@ -16,6 +16,7 @@ const ProductSection = () => {
   const [swiper, setSwiper] = useState(null);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const { products, loading, error } = useProducts(); // Fetch all products
 
   const filteredProducts =
     activeCategory === "All"
@@ -45,7 +46,20 @@ const ProductSection = () => {
           onSelect={setActiveCategory}
         />
 
+        {/* Loading and Error States */}
+        {loading && (
+          <div className="text-center py-12 text-white">
+            Loading products...
+          </div>
+        )}
+        {error && (
+          <div className="text-center py-12 text-red-400">
+            Error: {error}
+          </div>
+        )}
+
         {/* Carousel Container with padding for hover effects */}
+        {!loading && !error && (
         <div className="relative mt-8">
           {/* Side Gradients */}
           <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
@@ -104,9 +118,8 @@ const ProductSection = () => {
               </svg>
             </button>
           </div>
-
-
         </div>
+        )}
       </div>
     </section>
   );
